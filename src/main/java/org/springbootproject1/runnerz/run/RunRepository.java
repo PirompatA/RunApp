@@ -32,13 +32,16 @@ public class RunRepository {
         return run;
     }
 
-//    void updateRun(Integer id, Run run) {
-//        Optional<Run> existingRun = findById(id);
-//        if (existingRun.isPresent()) {
-//            runs.set(runs.indexOf(existingRun.get()), run);
-//            return null;
-//        }
-//    }
+    void updateRun(Integer id, Run run) {
+        Optional<Run> existingRun = findById(id);
+        if (existingRun.isPresent()) {
+            runs.set(runs.indexOf(existingRun.get()), run);
+        }
+    }
+
+    void deleteRun(Integer id){
+        runs.removeIf(run -> run.id().equals(id));
+    }
     @PostConstruct
     private void init(){
         runs.add(new Run(1,"11", LocalDateTime.now(), LocalDateTime.now().plus(30, ChronoUnit.MINUTES), 3,Location.INDOOR));

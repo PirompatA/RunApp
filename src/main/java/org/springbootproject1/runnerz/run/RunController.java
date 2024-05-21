@@ -38,11 +38,16 @@ public class RunController {
         return runRepository.createRun(run);
     }
 
-//    @PutMapping("/{id}")
-//    void updateRun(@PathVariable Integer id,@RequestBody Run request){
-//        return runRepository.updateRun(id,request);
-//    }
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{id}")
+    void updateRun(@PathVariable Integer id,@RequestBody Run request){
+        runRepository.updateRun(id,request);
+    }
 
 
-//    @DeleteMapping
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void deleteRun(@PathVariable Integer id){
+        runRepository.deleteRun(id);
+    }
 }
