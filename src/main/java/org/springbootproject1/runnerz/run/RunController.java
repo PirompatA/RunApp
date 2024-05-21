@@ -1,6 +1,8 @@
 package org.springbootproject1.runnerz.run;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -27,20 +29,20 @@ public class RunController {
     Optional<Run> findById(@PathVariable Integer id){
         Optional<Run> run = runRepository.findById(id);
         if(run.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Run Not Found");
+            throw new RunNotFoundException();
         }
         return run;
     }
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    Run createRun(@RequestBody Run run){
+    Run createRun(@Valid @RequestBody Run run){
         return runRepository.createRun(run);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    void updateRun(@PathVariable Integer id,@RequestBody Run request){
+    void updateRun(@PathVariable Integer id,@Valid @RequestBody Run request){
         runRepository.updateRun(id,request);
     }
 
