@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springbootproject1.runnerz.run.Location;
 import org.springbootproject1.runnerz.run.Run;
+import org.springbootproject1.runnerz.run.RunRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,10 +24,10 @@ public class Application {
     }
 
     @Bean
-    CommandLineRunner runner(){
+    CommandLineRunner runner(RunRepository runRepository){
         return args -> {
-            Run run = new Run(1, "First Run", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 5 , Location.OUTDOOR);
-            log.info("Run: "+run);
+            Run run = new Run(3, "Add from bean", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 5 , Location.OUTDOOR);
+            runRepository.createRun(run);
         };
     }
 
