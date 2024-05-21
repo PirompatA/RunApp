@@ -2,11 +2,8 @@ package org.springbootproject1.runnerz.run;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,20 +33,21 @@ public class RunController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    Optional<Run> createRun(@Valid @RequestBody Run run){
-        return runRepository.createRun(run);
+    Run createRun(@Valid @RequestBody Run run){
+        runRepository.save(run);
+        return run;
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    void updateRun(@PathVariable Integer id,@Valid @RequestBody Run request){
-        runRepository.updateRun(id,request);
+    void updateRun(@PathVariable Integer id,@Valid @RequestBody Run run){
+        runRepository.save(run);
     }
 
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteRun(@PathVariable Integer id){
-        runRepository.deleteRun(id);
+        runRepository.delete(runRepository.findById(id).get());
     }
 }
