@@ -33,9 +33,8 @@ public class RunController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    Run createRun(@Valid @RequestBody Run run){
+    void createRun(@Valid @RequestBody Run run){
         runRepository.save(run);
-        return run;
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -50,4 +49,10 @@ public class RunController {
     void deleteRun(@PathVariable Integer id){
         runRepository.delete(runRepository.findById(id).get());
     }
+
+    @GetMapping("/location/{location}")
+    List<Run> findByLocation(@PathVariable String location){
+        return runRepository.findAllByLocation(location);
+    }
 }
+
