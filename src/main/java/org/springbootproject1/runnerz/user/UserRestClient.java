@@ -15,18 +15,18 @@ public class UserRestClient {
         this.restClient = builder.baseUrl("https://jsonplaceholder.typicode.com/")
                 .build();
     }
-
-    public List<User> findAll(){
-        return restClient.get()
-                .uri("/users")
-                .retrieve()
-                .body(new ParameterizedTypeReference<>() {});
-    }
-
-    public User findById(Integer id){
-        return restClient.get()
-                .uri("/users/{id}",id)
-                .retrieve()
-                .body(User.class);
-    }
+//
+//    public List<User> findAll(){
+//        return restClient.get()
+//                .uri("/users")
+//                .retrieve()
+//                .body(new ParameterizedTypeReference<>() {});
+//    }
+//
+//    public User findById(Integer id){
+//        return restClient.get()
+//                .uri("/users/{id}",id)
+//                .retrieve()
+//                .body(User.class);
+//    }
 }
