@@ -1,4 +1,4 @@
-package org.springbootproject1.runnerz.user;
+package org.springbootproject1.runnerz.user.userClient;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.client.JdkClientHttpRequestFactory;

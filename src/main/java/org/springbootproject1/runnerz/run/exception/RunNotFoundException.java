@@ -1,4 +1,4 @@
-package org.springbootproject1.runnerz.run;
+package org.springbootproject1.runnerz.run.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

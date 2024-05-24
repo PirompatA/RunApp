@@ -1,5 +1,6 @@
-package org.springbootproject1.runnerz.user;
+package org.springbootproject1.runnerz.user.userClient;
 
+import org.springbootproject1.runnerz.user.entity.User;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;
 

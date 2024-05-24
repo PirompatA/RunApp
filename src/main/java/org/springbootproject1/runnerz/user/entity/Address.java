@@ -1,4 +1,4 @@
-package org.springbootproject1.runnerz.user;
+package org.springbootproject1.runnerz.user.entity;
 
 public record Address(
         String street,

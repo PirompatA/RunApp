@@ -1,8 +1,11 @@
 package org.springbootproject1.runnerz.run;
 
-import dev.danvega.runnerz.run.InMemoryRunRepository;
+import org.springbootproject1.runnerz.run.repository.InMemoryRunRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springbootproject1.runnerz.run.entity.Location;
+import org.springbootproject1.runnerz.run.entity.Run;
+import org.springbootproject1.runnerz.run.exception.RunNotFoundException;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

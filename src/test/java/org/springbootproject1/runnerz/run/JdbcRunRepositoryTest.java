@@ -1,8 +1,10 @@
 package org.springbootproject1.runnerz.run;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springbootproject1.runnerz.run.entity.Location;
+import org.springbootproject1.runnerz.run.entity.Run;
+import org.springbootproject1.runnerz.run.repository.JdbcRunRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;

@@ -2,9 +2,8 @@ package org.springbootproject1.runnerz;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springbootproject1.runnerz.user.User;
-import org.springbootproject1.runnerz.user.UserHttpClient;
-import org.springbootproject1.runnerz.user.UserRestClient;
+import org.springbootproject1.runnerz.user.entity.User;
+import org.springbootproject1.runnerz.user.userClient.UserHttpClient;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

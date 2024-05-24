@@ -1,7 +1,8 @@
-package org.springbootproject1.runnerz.run;
+package org.springbootproject1.runnerz.run.repository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springbootproject1.runnerz.run.entity.Run;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;

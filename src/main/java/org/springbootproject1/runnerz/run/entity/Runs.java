@@ -1,4 +1,4 @@
-package org.springbootproject1.runnerz.run;
+package org.springbootproject1.runnerz.run.entity;
 
 import java.util.List;
 

@@ -1,9 +1,10 @@
-package org.springbootproject1.runnerz.run;
+package org.springbootproject1.runnerz.run.entity;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springbootproject1.runnerz.run.repository.JdbcRunRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

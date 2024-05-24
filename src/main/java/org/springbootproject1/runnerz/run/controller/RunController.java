@@ -1,6 +1,8 @@
-package org.springbootproject1.runnerz.run;
+package org.springbootproject1.runnerz.run.controller;
 
 import jakarta.validation.Valid;
+import org.springbootproject1.runnerz.run.exception.RunNotFoundException;
+import org.springbootproject1.runnerz.run.repository.RunRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

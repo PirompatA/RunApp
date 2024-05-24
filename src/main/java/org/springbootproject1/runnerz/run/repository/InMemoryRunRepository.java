@@ -1,13 +1,11 @@
-package dev.danvega.runnerz.run;
+package org.springbootproject1.runnerz.run.repository;
 
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springbootproject1.runnerz.run.Location;
-import org.springbootproject1.runnerz.run.Run;
-import org.springbootproject1.runnerz.run.RunNotFoundException;
-import org.springbootproject1.runnerz.run.RunRepository;
-import org.springframework.stereotype.Repository;
+import org.springbootproject1.runnerz.run.entity.Location;
+import org.springbootproject1.runnerz.run.entity.Run;
+import org.springbootproject1.runnerz.run.exception.RunNotFoundException;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
